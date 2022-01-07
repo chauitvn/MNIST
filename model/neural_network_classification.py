@@ -2,7 +2,10 @@ import tensorflow as tf
 
 
 class NeuralNetworkClassification:
-    X_train, Y_train, X_val, Y_val = None
+    X_train = None
+    Y_train = None
+    X_val = None
+    Y_val = None
     model = None
 
     def __init__(self, batch_size, epochs):
