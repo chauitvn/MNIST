@@ -1,5 +1,6 @@
 import os
 from argparse import ArgumentParser
+import model.neural_network_classification as BasicModel
 
 if __name__ == "__main__":
     parser = ArgumentParser()
@@ -23,6 +24,9 @@ if __name__ == "__main__":
     print('===========================')
     
     # FIXME
-    # Do Prediction
+    # Do Training Data
+    model = BasicModel.NeuralNetworkClassification()
+    model()
+
 
 
