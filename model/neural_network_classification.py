@@ -37,7 +37,7 @@ class NeuralNetworkClassification:
             tf.keras.layers.Dense(10, activation='softmax')
         ])
         # Adding thuat toan cho mo hinh
-        self.model.compile(optimizer='adam', loss='categorical_crossentropy', metric=['categorical_accuracy'])
+        self.model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['categorical_accuracy'])
         # print the model parameters
         self.model.summary()
         # Adding the callback functions
