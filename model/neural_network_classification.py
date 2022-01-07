@@ -32,7 +32,7 @@ class NeuralNetworkClassification:
         tf.random.set_seed(3003)
 
         self.model = tf.keras.models.Sequential([
-            tf.keras.Input(shape=self.input_shape),
+            tf.keras.Input(shape=(28*28,)),
             tf.keras.layers.Dense(28, activation='relu'),
             tf.keras.layers.Dense(10, activation='softmax')
         ])
