@@ -34,6 +34,7 @@ class NeuralNetworkClassification:
         self.model = tf.keras.models.Sequential([
             tf.keras.layers.Flatten(input_shape=(28, 28)),
             tf.keras.layers.Dense(28, activation='relu'),
+            tf.keras.layers.Dense(14, activation='relu'),
             tf.keras.layers.Dense(10, activation='softmax')
         ])
         # Adding thuat toan cho mo hinh
