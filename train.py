@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     # FIXME
     # Do Training Data
-    model = BasicModel.NeuralNetworkClassification()
+    model = BasicModel.NeuralNetworkClassification(batch_size=128, epochs=500)
     model()
 
 

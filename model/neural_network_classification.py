@@ -51,7 +51,7 @@ class NeuralNetworkClassification:
         ]
 
         hist = self.model.fit(self.X_train, self.Y_train, batch_size=self.batch_size, epochs=self.epochs, verbose=2,
-                              callbacks=self.callbacks)
+                              callbacks=callbacks)
 
     def evaluate_model(self):
         score = self.model.evaluate(self.X_val, self.Y_val, verbose=0)
