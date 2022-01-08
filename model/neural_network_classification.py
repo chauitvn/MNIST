@@ -38,7 +38,8 @@ class NeuralNetworkClassification:
             tf.keras.layers.Dense(10, activation='softmax')
         ])
         # Adding thuat toan cho mo hinh
-        self.model.compile(optimizer=tf.keras.optimizers.Adam(), loss=tf.keras.losses.SparseCategoricalCrossentropy(), metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
+        self.model.compile(optimizer='adam', loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+                           metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
         # print the model parameters
         self.model.summary()
         # Adding the callback functions
@@ -52,7 +53,7 @@ class NeuralNetworkClassification:
         ]
 
         hist = self.model.fit(self.X_train, self.Y_train, batch_size=self.batch_size, epochs=self.epochs, verbose=2,
-                              callbacks=callbacks)
+                              validation_data=(self.X_val, self.Y_val), callbacks=callbacks)
 
     def evaluate_model(self):
         score = self.model.evaluate(self.X_val, self.Y_val, verbose=0)
